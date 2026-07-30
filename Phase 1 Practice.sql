@@ -6,7 +6,7 @@ select distinct "Job_Title" from ai_impact_on_job ;   -- gives unique value
 select * 
 from ai_impact_on_job
 order by "Skill_3" desc ;  
-`
+
 select * 
 from ai_impact_on_job
 order by "Skill_4" desc, "Skill_6" asc  ;  
@@ -45,3 +45,7 @@ and "AI_Exposure_Index" is not null;
 
 insert into ai_impact_on_job ("Job_Title","Average_Salary","Education_Level","AI_Exposure_Index")            --add values in specific columns 
 values ('Chaprii','20000','+2 Pass','0.23');
+
+delete 
+from ai_impact_on_job
+where "Job_Title" = 'Security Guard';
