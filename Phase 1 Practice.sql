@@ -49,3 +49,12 @@ values ('Chaprii','20000','+2 Pass','0.23');
 delete 
 from ai_impact_on_job
 where "Job_Title" = 'Security Guard';
+
+select * from ai_impact_on_job
+limit 8;
+
+
+-- Aggregrate Function
+select min("Years_Experience") from ai_impact_on_job;
+
+select max("Years_Experience") from ai_impact_on_job;
