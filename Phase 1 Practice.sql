@@ -58,3 +58,27 @@ limit 8;
 select min("Years_Experience") from ai_impact_on_job;
 
 select max("Years_Experience") from ai_impact_on_job;
+
+
+
+    -- Count
+select count(*) from ai_impact_on_job;
+select count("Average_Salary") from ai_impact_on_job;
+select count(distinct "Job_Title") from ai_impact_on_job;
+
+-- Qn: Count the number of Average Salary which is higher than 50000
+select count(distinct "Average_Salary") from ai_impact_on_job where "Average_Salary" > 50000 ;
+
+
+-- SUM fxn
+select sum("Years_Experience") from ai_impact_on_job where "Education_Level" = 'PhD';
+
+select sum("Average_Salary") from ai_impact_on_job;
+
+-- Avg Fxn
+--  decimal value paxi ko lai count garna ROund , value rakhne 
+select Round(AVG("Average_Salary"),4) 
+from ai_impact_on_job 
+where "Average_Salary" > 30000 ;				
+
+
