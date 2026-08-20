@@ -82,3 +82,29 @@ from ai_impact_on_job
 where "Average_Salary" > 30000 ;				
 
 
+-- Like 
+-- The LIKE operator is used in a WHERE clause to search for a specified pattern within a column's text data.
+-- two wildcards often used in conjunction with the LIKE operator:
+-- A percent sign % - represents zero, one, or multiple characters
+-- A underscore sign _ - represents a single character
+
+-- Qn: Select all Job-Title with that starts with the letter "a":
+select * 
+from ai_impact_on_job
+where "Job_Title" like 'T%'; 
+
+SELECT * 
+FROM ai_impact_on_job 
+WHERE "AI_Exposure_Index"::TEXT LIKE '1%';
+
+--The _ Wildcard
+-- Return all Job Title from a table that starts with 'N' followed by one wildcard character, then 'rs' and then two wildcard characters:
+
+select *
+from ai_impact_on_job 
+where "Job_Title" like 'N_rs_' ;
+
+SELECT *
+FROM customer 
+WHERE city = "Kathmandu" OR city ="Pokhara"
+AND salary = 10000
